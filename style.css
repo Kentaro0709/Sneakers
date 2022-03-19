@@ -1,0 +1,287 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 100%;
+}
+body{
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+a{
+  color: #121212;
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+li{
+  list-style: none;
+}
+.site-title{
+  line-height: 1px;
+}
+.site-title a{
+  display: block;
+}
+.sec-title{
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+}
+.fadein{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+#header{
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+#navi{
+  display: block;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  padding: 60px 25px;
+  color: #fff;
+  background-color: #121212;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 20;
+  transition: all ease 0.5s;  
+}
+#navi a{
+  color: #fff;
+}
+.open #navi{
+  opacity: 1;
+  left: 0;
+}
+#navi ul{
+  margin: 0;
+  padding: 0;
+}
+#navi .nav-menu{
+  margin-bottom: 60px;
+  border-top: 1px solid #fff;
+}
+#navi .nav-menu li{
+  position: relative;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+}
+#navi ul .nav-sns li{
+  padding: 5px 0;
+}
+.toggle_btn{
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 20;
+  transition: all .5s;
+}
+.toggle_btn span{
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #333;
+  transition: 0.5s all;
+}
+.toggle_btn span:nth-child(1){
+  top: 4px;
+}
+.toggle_btn span:nth-child(2){
+  top: 14px;
+}
+.toggle_btn span:nth-child(3){
+  bottom: 4px;
+}
+.open .toggle_btn span{
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1){
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2){
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3){
+  transform: translateY(-10px) rotate(315deg);
+}
+#mask{
+  display: none;
+  transition: all .5s;
+}
+.open #mask{
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #000;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+}
+#main{
+  padding-top: 80px;
+}
+#bg-video{
+  width: 100%;
+}
+#pickup{
+  width: 100%;
+  padding: 100px 0 50px 0;
+}
+#pickup .slick-area{
+  font-size: 0;
+}
+#pickup .slick-area li{
+  padding: 0 30px;
+}
+#feature{
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
+}
+#feature .grid{
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#feature .grid .item{
+  box-shadow: 0 0 8px 4px #ccc;
+  transition: all .3s ease;
+}
+#feature .grid img{
+  vertical-align: top;
+}
+#feature .grid .item-content{
+  padding: 30px;
+}
+#feature .grid .item-cat{
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+#feature .grid .item-text{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#feature .grid .item-date{
+  font-size: 0.75rem;
+  text-align: right;
+}
+#contact{
+  color: #fff;
+  background-color: #121212;
+  padding: 50px 0;
+}
+#contact .sec-title{
+  color: #fff;
+}
+#contact .content{
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+#contact .contact-info{
+  width: 45%;
+}
+#contact .contact-info p{
+  margin-bottom: 30px;
+}
+#contact .contact-form{
+  width: 45%;
+}
+#contact .contact-form input,
+#contact .contact-form textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: none;
+}
+#contact .button button{
+  width: 200px;
+  color: #fff;
+  background-color: #121212;
+  border: 1px solid #fff;
+  padding: 12px 0;
+  margin-bottom: 0;
+}
+#contact .button button:hover{
+  color: #121212;
+  background-color: #fff;
+}
+#footer {
+  color: #fff;
+  background-color: #121212;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 10px;
+}
+@media screen and (max-width: 600px){
+  .sec-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .toggle_btn{
+    right: 20px;
+  }
+  #header{
+    padding: 20px 16px;
+  }
+  #bg-video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  #pickup{
+    padding: 80px 0;
+  }
+  #pickup .slick-area li{
+    padding: 0 20px;
+  }
+  #feature{
+    padding: 80px 16px;
+  }
+  #feature .grid .item-content{
+    padding: 16px;
+  }
+  #contact{
+    padding: 80px 0;
+  }
+  #contact .content{
+    flex-direction: column;
+  }
+  #contact .contact-info,
+  #contact .contact-form{
+    width: 100%;
+  }
+  #contact .contact-form .button button{
+    width: 100%;
+  }
+}
